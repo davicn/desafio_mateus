@@ -24,6 +24,9 @@ create table parceirias(
     telefone varchar(11) not null, 
     primary key (idParceiro));
 
+
+ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY '12345';
+
 -- insert em users
 insert into users (nome, local) values ('Fulano da Silva','Filial 2');
 

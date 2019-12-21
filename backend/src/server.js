@@ -1,5 +1,5 @@
 const express = require('express')
-const routes = require('./parceiriasRoute.js')
+const routes = require('./routes.js')
 
 const server = express()
 server.use(express.json())

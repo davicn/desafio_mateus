@@ -34,6 +34,16 @@ insert into users (nome, local) values ('Fulano da Silva','Filial 2');
 insert into parceirias (nome,texto,image,telefone) values 
 ("Parceiro 1","Essa parceiria é top.",'/home/davi/Documentos/teste_mateus/backend/database/img/img1.jpeg',"92345678"),
 ("Parceiro 2","Essa parceiria é show!",'/home/davi/Documentos/teste_mateus/backend/database/img/img2.jpeg',"987654321");
-
+/*
 insert into posts(texto,imagem,isUser) values ("Aqui estou mais um dia",'/home/
 davi/Documentos/teste_mateus/backend/database/img/Mateus.jpg',1);
+*/
+-- insert post
+insert into posts (texto, imagem, idUser) values 
+("Aqui estou mais um dia",'/home/davi/Documentos/teste_mateus/backend/database/img/Mateus.jpg',(select idUser from users));
+
+
+-- insert em parcerias
+insert into avisos (titulo,texto,image) values 
+("Primeiro aviso","Esse aqui é só um aviso de teste",'/home/davi/Documentos/teste_mateus/backend/database/img/aviso1.jpg'),
+("É natal!","Feliz natal galera! Tudo de bom para vcs!",'/home/davi/Documentos/teste_mateus/backend/database/img/aviso2.jpg');

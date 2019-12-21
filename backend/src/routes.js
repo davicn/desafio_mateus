@@ -43,8 +43,27 @@ routes.get('/posts', (req, res) => {
     })
 })
 
-routes.put('/put_post',(req,res)=>{
-    
+routes.post('/post_post', (req, res) => {
+    let post_ = req.body
+    let texto = post_.texto
+    let imagem = post_.imagem
+    let idUser = '(select idUser from users)'
+
+    query = "insert into posts (texto,imagem,idUser) values ('" +
+        texto + "','" + imagem + "'," + idUser + ")"
+
+    mysqlConnection.query(query, (err, rows, fields) => {
+        if (!err) {
+            res.json(rows)
+            console.log(rows)
+        } else {
+            console.log(err)
+        }
+    })
+
+    console.log(query)
+    return res.json({ Testando: "tranquilo" })
+
 })
 
 

@@ -43,6 +43,7 @@ routes.get('/posts', (req, res) => {
     })
 })
 
+// insert post
 routes.post('/post_post', (req, res) => {
     let post_ = req.body
     let texto = post_.texto

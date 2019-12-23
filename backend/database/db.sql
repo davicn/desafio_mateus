@@ -24,6 +24,12 @@ create table parceirias(
     telefone varchar(11) not null, 
     primary key (idParceiro));
 
+create table avisos (
+  idavisos int not null auto_increment,
+  titulo varchar(45) not null,
+  texto varchar(150) not null,
+  image BLOB NULL,
+  PRIMARY KEY (idavisos));
 
 ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY '12345';
 

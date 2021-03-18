@@ -12,5 +12,7 @@ const gruposController = new GruposController();
 router.get('/health', healthController.status);
 router.get('/avisos',avisosController.show);
 router.get('/grupos',gruposController.show);
+router.post('/grupos',gruposController.create);
+
 
 export { router };

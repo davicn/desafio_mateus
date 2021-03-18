@@ -6,6 +6,7 @@
   "password": "12345",
   "database": "catchup",
   "migrations":["./src/database/migrations/**.ts"],
+  "entities":["./src/models/**.ts"],
   "cli": {
     "migrationsDir": "./src/database/migrations"
   }
